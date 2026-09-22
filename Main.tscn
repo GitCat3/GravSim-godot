@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bs87hwmvc2rjc"]
+
+[ext_resource type="Script" uid="uid://cnhtiqc0eflhk" path="res://simulation.gd" id="1_r0du0"]
+[ext_resource type="PackedScene" uid="uid://c4qrxfkx1fsi3" path="res://Star.tscn" id="1_uu6xs"]
+[ext_resource type="Script" uid="uid://bnwmygv0wtl52" path="res://collisionthing.gd" id="3_r0du0"]
+
+[node name="Main" type="Node2D" unique_id=870656233]
+
+[node name="Simulation" type="Node2D" parent="." unique_id=2060248027]
+script = ExtResource("1_r0du0")
+
+[node name="Star1" parent="Simulation" unique_id=958504080 instance=ExtResource("1_uu6xs")]
+position = Vector2(-13, -1)
+mass = 30.0
+contact_monitor = true
+max_contacts_reported = 2
+linear_damp_mode = 1
+script = ExtResource("3_r0du0")
+
+[node name="Star2" parent="Simulation" unique_id=996531019 instance=ExtResource("1_uu6xs")]
+position = Vector2(21, 0)
+contact_monitor = true
+max_contacts_reported = 2
+linear_velocity = Vector2(0, -10)
+linear_damp_mode = 1
+script = ExtResource("3_r0du0")
+
+[node name="Star3" parent="Simulation" unique_id=637497554 instance=ExtResource("1_uu6xs")]
+position = Vector2(5, 35)
+contact_monitor = true
+max_contacts_reported = 2
+linear_velocity = Vector2(10, 0)
+linear_damp_mode = 1
+script = ExtResource("3_r0du0")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=213211210]
+zoom = Vector2(2.29, 2.29)
+process_callback = 0
+limit_enabled = false

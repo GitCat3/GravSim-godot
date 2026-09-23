@@ -1,14 +1,25 @@
 [gd_scene format=3 uid="uid://c4qrxfkx1fsi3"]
 
+[ext_resource type="Script" uid="uid://clncaf4tjgqjw" path="res://star.gd" id="1_22467"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_pb32r"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1b021"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_pb32r"]
 
 [node name="Star" type="RigidBody2D" unique_id=958504080]
+continuous_cd = 2
+contact_monitor = true
+max_contacts_reported = 2
+linear_damp_mode = 1
+script = ExtResource("1_22467")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2040762060]
 shape = SubResource("CircleShape2D_pb32r")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1897850503]
+modulate = Color(1, 0, 0.18431373, 1)
+material = SubResource("CanvasItemMaterial_1b021")
 scale = Vector2(20, 20)
 mesh = SubResource("SphereMesh_pb32r")

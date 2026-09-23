@@ -6,9 +6,4 @@ func _ready() -> void:
 
 func _on_body_entered(body: Node) -> void:
 	if body is RigidBody2D:
-		if body.mass < mass:
-			mass += body.mass
-			body.free()
-			
-		elif body.mass == mass:
-			var velocity = linear_velocity + body.linear_velocity
+		Engine.time_scale = 0

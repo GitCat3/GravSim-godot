@@ -6,7 +6,7 @@ const GRAVITATIONAL_CONSTANT = 1.0
 var stars: Array[RigidBody2D]
 
 func _ready() -> void:
-	Engine.time_scale = 5.0
+	Engine.time_scale = 15.0
 
 func _physics_process(_delta: float) -> void:
 	stars.assign(get_children())

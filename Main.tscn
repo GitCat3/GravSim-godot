@@ -17,16 +17,19 @@ script = ExtResource("1_r0du0")
 
 [node name="Star1" parent="Simulation" unique_id=958504080 instance=ExtResource("1_uu6xs")]
 mass = 1000.0
+color_of_line = Color(1.2706519e-05, 0.33922938, 0.9252228, 1)
 
 [node name="Star2" parent="Simulation" unique_id=996531019 instance=ExtResource("1_uu6xs")]
 position = Vector2(600, 0)
 mass = 100.0
 linear_velocity = Vector2(0, 6)
+color_of_line = Color(0, 0.6815381, 0.03919499, 1)
 
 [node name="Star3" parent="Simulation" unique_id=637497554 instance=ExtResource("1_uu6xs")]
 position = Vector2(700, 0)
 mass = 10.0
 linear_velocity = Vector2(0, 20)
+color_of_line = Color(0.8999732, 0.4082145, 0, 1)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=213211210 node_paths=PackedStringArray("tracked_nodes")]
 zoom = Vector2(2.29, 2.29)

@@ -1,10 +1,13 @@
 extends RigidBody2D
 
 var can_merge = true # Prevents both stars from trying to merge at the same time
+@export var color_of_line = Color(1, 1, 1, 1)
 
 func _ready():
 	# Connect the built-in collision signal
 	body_entered.connect(_on_body_entered)
+	var line2d: Line2D = get_node("Line2D")
+	line2d.default_color = color_of_line
 
 func _on_body_entered(body):
 	# Check if the thing we hit is another star and neither has merged yet
